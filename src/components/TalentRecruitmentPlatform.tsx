@@ -94,6 +94,7 @@ const TalentRecruitmentPlatform: React.FC = () => {
       
       if (result.success && result.data) {
         // Transform API response to match our interface
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const transformedSuggestions = result.data?.data.map((item: any) => ({
           id: item.companyId || Math.random().toString(36).substr(2, 9),
           name: item.displayValue || item.text || item.label,
