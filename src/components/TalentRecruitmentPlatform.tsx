@@ -115,7 +115,7 @@ const TalentRecruitmentPlatform: React.FC = () => {
         item.name.toLowerCase().includes(query.toLowerCase())
       ) || [];
       setSuggestions(mockData);
-      setError('Using mock data - API connection failed');
+      setError('API Request Limit Reached (Try After Sometime)');
     } finally {
       setLoading(false);
     }
